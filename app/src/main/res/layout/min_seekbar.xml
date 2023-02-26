@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/progress_parent">
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/min_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:splitTrack="false"
+        android:maxHeight="8dp"
+        android:minHeight="8dp"
+        android:max="100"
+        android:min="0"
+        android:progressDrawable="@drawable/seekbar_progress_selector"
+        android:thumb="@drawable/seekbar_thumb_selector"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

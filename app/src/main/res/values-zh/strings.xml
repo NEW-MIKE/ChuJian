@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tag_first" type="id"></item>
+    <string name="app_name">初见</string>
+    <string name="network">网络</string>
+    <string name="historgram">直方图</string>
+    <string name="guidechart">导星</string>
+    <string name="starprofile">星点图</string>
+    <string name="chart_label">导星</string>
+    <string name="favorite">收藏</string>
+    <string name="connecting">网络连接中....</string>
+    <string name="datareading">数据加载中</string>
+    <string name="connect_success">网络连接成功</string>
+    <string name="network_fail">未连接服务</string>
+    <string name="network_success">已连接</string>
+    <string name="data_loading">数据加载中..</string>
+    <string name="custom">自定义</string>
+    <string name="no_file_selected">文件未选中</string>
+
+    <string name="delete_confirm">你确定要删除吗？</string>
+    <string name="legal_input_range">合法输入范围是：</string>
+    <string name="delete_sure">删除</string>
+    <string name="normal_sure">确定</string>
+    <string name="delete_cancel">取消</string>
+    <!--Messages-->
+    <string name="downloaded">下载中</string>
+    <string name="canread"></string>
+
+    <string name="max_ra_description">赤经发送的最长脉冲长度 </string>
+    <string name="max_dec_description">赤纬发送的最长脉冲长度, 如果漂移在最后，则增加</string>
+    <string name="mount_is_parked">赤道仪已停止</string>
+
+    <string name="south">南</string>
+    <string name="north">北</string>
+    <string name="east">东</string>
+    <string name="west">西</string>
+
+    <!-- screen main activity string  -->
+    <string name="Go">跳转</string>
+    <string name="More">更多</string>
+    <string name="singleTrigger">单帧触发</string>
+    <string name="videoMode">视频模式</string>
+    <string name="planPhoto">计划拍摄</string>
+    <string name="realTimeStack">实时叠加</string>
+    <string name="autoFocuse">自动调焦</string>
+
+    <string name="target_temp">制冷</string>
+    <string name="main_camera_not_connect">相机未连接</string>
+
+    <string name="downloading">正在下载中</string>
+    <string name="photo_compound">下载中</string>
+
+    <!--device main activity string  -->
+    <string name="maincamera">主相机</string>
+    <string name="main_camera_status">主相机</string>
+    <string name="guide_camera_status">导星相机</string>
+    <string name="date">日期</string>
+    <string name="guidingcamera">导星相机</string>
+    <string name="longitude">经度</string>
+    <string name="scope_longitude">经度:</string>
+    <string name="latitude">纬度</string>
+    <string name="scope_latitude">纬度:</string>
+    <string name="focallength">主镜/导星镜焦距</string>
+    <string name="mm">mm</string>
+    <string name="filterwheel">滤镜轮</string>
+    <string name="focuser">电调焦</string>
+    <string name="focuser_device">焦距</string>
+    <string name="deviceconnection">设备连接</string>
+    <string name="enter">进入</string>
+    <string name="minute">s</string>
+
+    <!-- guide activity string  -->
+
+    <string name="calibrating">校准</string>
+    <string name="calibrating_fail">校准失败</string>
+    <string name="guide_start_lost">导星丢失</string>
+    <string name="guiding_stop">导星停止</string>
+    <string name="guiding_refreshing">循环采集</string>
+    <string name="guiding_processing">导星中</string>
+    <string name="star_selected">导星选中</string>
+
+    <!-- browser activity string  -->
+
+    <string name="video_save_success">视频存储成功</string>
+    <string name="video_save_fail">视频存储失败</string>
+    <string name="video_path_error">视频文件路径错误</string>
+
+    <!-- astro library activity string  -->
+
+    <!-- goto string  -->
+    <string name="stop_go">停止</string>
+    <string name="moving_to_target_location">目标赤经/赤纬</string>
+    <string name="can_not_goto_target">无法达到目标位置 </string>
+    <string name="current_location">当前赤经/赤纬</string>
+    <string name="current_is_park">当前是park状态，是否要unpark</string>
+    <string name="cancel_unpark">No</string>
+    <string name="confirm_unpark">Yes</string>
+    <string name="normal_cancel">取消</string>
+    <string name="check_disconnect_reason">1. 请检查盒子电源是否开启\n2. 请检查应用程序是否已经连上了盒子热点\n3. 您还可以去[设置]-[其他]尝试通过IP连接</string>
+    <string name="check_disconnect_reason_no_wrap">1. 请检查盒子电源是否开启 \n2. 请检查应用程序是否已经连上了盒子热点 \n3. 您还可以尝试通过IP连接</string>
+    <string name="check_disconnect_title">网络连接失败，请检查：</string>
+
+    <!-- setting activity string  -->
+
+
+    <!-- task activity string  -->
+    <string name="FieldType">类型</string>
+    <string name="Light">亮场</string>
+    <string name="Bias">偏置场</string>
+    <string name="Dark">暗场</string>
+    <string name="Flat">平场</string>
+    <string name="ExposeTime">曝光时间</string>
+    <string name="Total">合计 #</string>
+    <string name="TaskTotal">总计</string>
+    <string name="Bin">Bin</string>
+    <string name="Cancel">取消</string>
+    <string name="Target">目标名称</string>
+    <string name="DelayStart">首张延迟</string>
+    <string name="SequenceMode">拍摄模式</string>
+    <string name="StartGuiding">开启导星</string>
+    <string name="SlewToTarget">中天翻转目标</string>
+    <string name="CenterTarget">居中目标</string>
+    <string name="AutoFocuseTarget">自动聚焦目标</string>
+    <string name="pouf">结束关机</string>
+    <string name="rsposition">望远镜归零位</string>
+    <string name="Reset">重置</string>
+    <!-- fragment string  -->
+    <string name="unidirectional">单向</string>
+    <string name="position">当前位置</string>
+    <string name="slotnumber">卡槽数量</string>
+    <!-- focuser string  -->
+    <string name="reserved">反向</string>
+    <string name="temperature">温度</string>
+    <string name="current_position">当前位置</string>
+    <string name="target_position">目标位置</string>
+    <string name="focuser_goto">前往</string>
+    <string name="focuser_stop">停止</string>
+    <string name="maxstep">最大步数</string>
+    <string name="coarse_step">粗调</string>
+    <string name="fine_step">精调</string>
+    <string name="beep">蜂鸣</string>
+
+
+    <string name="Binning">Binning</string>
+    <string name="Gain">增益</string>
+    <string name="Exp">曝光</string>
+    <string name="MaxRA">赤经修正最大时长</string>
+    <string name="ms">ms</string>
+    <string name="MaxDEC">赤纬修正最大时长</string>
+    <string name="usflt">使用上次校准数据</string>
+    <string name="dithering">抖动</string>
+    <string name="dither">抖动</string>
+    <string name="ditheringscription">抖动仅在计划拍摄，实时叠加和多目标的亮场中生效</string>
+    <string name="DitherScale">抖动范围</string>
+    <string name="scaleDescription">抖动范围，默认 = 1.0 (0.1 - 100)</string>
+    <string name="DitherMode">抖动模式</string>
+    <string name="Random">随机</string>
+    <string name="Spiral">螺旋</string>
+    <string name="RAOnly">抖动仅限赤经轴</string>
+    <string name="Resolution">分辨率</string>
+    <string name="ConversionGain">增益转换</string>
+    <string name="HCG">HCG</string>
+    <string name="LCG">LCG</string>
+    <string name="HDR">HDR</string>
+    <string name="LowNoiseMode">低噪音模式</string>
+    <string name="Cooling">制冷</string>
+    <string name="Fan">风扇</string>
+    <string name="TargetTemp">目标温度</string>
+    <string name="Heating">加热</string>
+    <string name="OFF">关闭</string>
+    <string name="High">高</string>
+    <string name="UART">串口</string>
+    <string name="uart_tbtn_off">断开连接</string>
+    <string name="uart_tbtn_on">连接</string>
+    <string name="BaudRate">波特率</string>
+    <string name="RA">赤经</string>
+    <string name="Scope_RA">赤经:</string>
+    <string name="DEC">赤纬</string>
+    <string name="Scope_DEC">赤纬:</string>
+    <string name="TimeZone">时区:</string>
+    <string name="Time">时间</string>
+    <string name="Scope_Time">时间:</string>
+    <string name="GuidingSpeed">导星速率</string>
+    <string name="Tracking">追踪</string>
+    <string name="TrackingRate">追踪速率</string>
+    <string name="Sidereal">恒星</string>
+    <string name="Solar">太阳</string>
+    <string name="Lunar">月亮</string>
+    <string name="Park">park</string>
+    <string name="unpark">unpark</string>
+    <string name="mount_info">赤道仪信息</string>
+    <string name="folder_manager">文件管理</string>
+    <string name="astro_library">导星库</string>
+    <string name="azimuth">方位角</string>
+
+    <string name="counter_clockwise">逆时针方向</string>
+
+    <!-- menu string  -->
+    <string name="menu_main_camera">主相机</string>
+    <string name="menu_guide_camera">导星相机</string>
+    <string name="menu_filter_wheel_camera">滤镜轮</string>
+    <string name="menu_auto_focuser_camera">电调焦</string>
+    <string name="menu_telescope_camera">赤道仪</string>
+    <string name="menu_misc_camera">其他</string>
+    <string name="capture_frame_success">抓图成功</string>
+    <string name="astrolibrary_chart_y">高度/°</string>
+
+
+    <string name="device_not_connect">设备操作失败</string>
+    <string name="video_mode_timeout">进入视频模式失败，请检查设备连接，曝光时间</string>
+
+
+    <string name="can_not_start_camera_push_mode">相机推送模式开启失败</string>
+    <string name="temperature_value_invalid">温度值不在有效范围内</string>
+    <string name="exposure_time_invalid">曝光时间不在有效范围内</string>
+    <string name="picture_is_invalid">图片无效</string>
+    <string name="ip_disconnect">与服务端断开连接</string>
+    <string name="ip_connected">与服务端建立连接</string>
+    <string name="shutdown">重启</string>
+    <string name="shutdown_main">你确定要重启吗?</string>
+    <string name="goto_ip_connect">尝试IP连接</string>
+    <string name="network_connect">连接网络</string>
+    <string name="capture_frame_fail">抓图不成功，请再次尝试</string>
+    <string name="frame_is_downloading">图片正在下载中</string>
+    <string name="astrolib_search_hint">输入天体名称/编号</string>
+    <string name="astrolib_search_history">历史记录</string>
+    <string name="file_has_choosed">已选中</string>
+    <string name="mid_row">midrow</string>
+    <string name="avg_row">avgrow</string>
+    <string name="avg_col">avgcol</string>
+    <string name="video_transform_fail">视频传输出现错误</string>
+
+</resources>

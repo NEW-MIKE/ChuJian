@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- normal color  -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0A82E1</color>
+    <color name="red">#ED1101</color>
+    <color name="grey">#8F8887</color>
+    <color name="green">#22C629</color>
+    <color name="yellow">#D3AC39</color>
+    <color name="blue_03A9F4">#03A9F4</color>
+    <color name="grey_E1E1E1">#E1E1E1</color>
+    <color name="title_background">#045850</color>
+    <color name="screen_spinner_background">#323232</color>
+    <color name="shape_edit_background">#323232</color>
+    <color name="spinner_item_text_color">#666666</color>
+    <color name="spinner_drop_down_arrow_color">#E5E5E5</color>
+    <color name="hint_text_color">#7f7f7f</color>
+    <color name="hint_text_color_alpha">#cc7f7f7f</color>
+    <color name="all_blue_color">#007da0</color>
+    <color name="all_blue_color_alpha">#80007da0</color>
+    <color name="ball_color">#f0f0f0</color>
+    <color name="ball_color_alpha">#66f0f0f0</color>
+    <color name="switch_track_off_color">#7f7f7f</color>
+    <color name="switch_track_off_color_alpha">#cc7f7f7f</color>
+    <color name="side_menu_background_color">#1A1A1A</color>
+    <color name="pop_side_menu_background_color">#991A1A1A</color>
+    <color name="scroller_cover_background">#99f0f0f0</color>
+    <color name="menu_pop_cover_start_background">#ff323232</color>
+    <color name="menu_pop_cover_end_background">#00323232</color>
+    <color name="btn_normal_color">#7fbecf</color>
+
+    <color name="menu_circle_center_blue_color">#ff007da0</color>
+    <color name="menu_circle_half_blue_color">#80007da0</color>
+    <color name="menu_circle_size_blue_color">#00007da0</color>
+    <color name="theme_background">#ff262626</color>
+    <!-- 此处是goto滚轮颜色以及整体背景颜色的约束点-->
+    <color name="goto_pop_background">#1A1A1A</color>
+    <color name="goto_pop_item_background">#1A848888</color>
+    <color name="goto_pop_item_background_no_alpha">#848888</color>
+    <color name="goto_park_cover_background">#cc1A1A1A</color>
+    <!-- 此处是主页面滚轮颜色的约束点-->
+    <color name="main_scroller_background">#0A0B0B</color>
+    <color name="scroller_edit_text_color">#D3AC39</color>
+    <color name="scroller_edit_text_background">#0A0B0B</color>
+    <color name="scroller_textview_text_selected_color">#0E8211</color>
+    <color name="scroller_selected_background">#33FFFFFF</color>
+    <color name="scroller_gradient_start_color">#001a1a1a</color>
+
+
+    <color name="dock_panel_whole_bg">#cc1A1A1A</color>
+    <!-- 首页面的背景值-->
+    <color name="device_edit_hint_background">#777C7C</color>
+    <color name="normal_background">#141414</color>
+    <color name="rv_scroller_bar_bg">#0C0C0C</color>
+    <color name="normal_text_color">#E5E5E5</color> <!-- 229 = 0xe5-->
+    <color name="browser_up_path_text_color">#E5E5E5</color> <!-- 229 = 0xe5-->
+    <color name="browser_current_path_text_color">#E5E5E5</color> <!-- 229 = 0xe5-->
+
+    <!-- dock 颜色约束值-->
+    <color name="dock_flag_background">#777C7C</color>
+
+
+    <!-- task activity color  -->
+    <color name="task_item_background">#515151</color>
+    <color name="task_item_longclick_background">#817E7E</color>
+    <color name="task_item_stroke_color">#414141</color>
+    <color name="task_item_stroke_color_with_alpha">#4d414141</color>
+    <color name="task_dialog_background">#191A1B</color>
+
+    <!-- screen main activity color  -->
+    <color name="takephoto_btn_background">#F10A0A</color>
+
+
+    <!-- main activity color  -->
+
+
+    <!-- guide activity color  -->
+
+
+    <!-- browser activity color  -->
+
+    <color name="dialog_normal_background">#554E4E</color>
+
+    <!-- astro library activity color  -->
+
+
+    <!-- setting activity color  -->
+    <color name="setting_panel_whole_bg">#80000000</color>
+    <color name="setting_fragment_background">#554E4E</color>
+    <color name="setting_spinner_background">#434141</color>
+    <color name="setting_btn_selected_background">#0DA9F1</color>
+    <color name="setting_menu_path_color">#0DA9F1</color>
+    <color name="setting_panel_container_background_color">#cc100F0F</color>
+    <color name="setting_menu_layout_background">#44D1C7C7</color>
+    <color name="setting_menu_layout_blank_background">#00D1C7C7</color>
+    <color name="setting_item_container_background">#cc000000</color>
+    <color name="setting_circle_menu_text_color_checked">#ffffff</color>
+    <color name="setting_circle_menu_text_color_normal">#828282</color>
+    <color name="setting_circle_menu_text_color_disabled">#4c4c4c</color>
+    <color name="setting_circle_menu_start_color">#001924</color>
+    <color name="setting_circle_menu_end_color">#000000</color>
+    <color name="setting_container_bg_left_bottom_color">#001924</color>
+    <color name="setting_container_bg_center_color">#131011</color>
+    <color name="setting_container_bg_right_up_color">#001924</color>
+    <color name="disabled_color">#3B3C3C</color>
+
+    <color name="histogram_left_bar_color">#DADAE0</color>
+    <color name="histogram_right_bar_color">#78789B</color>
+    <color name="histogram_line_color">#323232</color>
+
+
+    <color name="histogram_data_line_color">#7fbecf</color>
+
+    <!-- fragment color  -->
+
+
+    <color name="number_pop_pressed">#4C4C4C</color>
+
+</resources>

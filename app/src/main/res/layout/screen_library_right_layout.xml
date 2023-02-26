@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/both_side_menu_width"
+    android:layout_height="match_parent"
+    android:background="@color/side_menu_background_color"
+    android:id="@+id/library_right_side"
+    tools:context=".ScreenMainActivity">
+
+    <ToggleButton
+        android:id="@+id/find_btn"
+        android:textAllCaps="false"
+        android:textOn=" "
+        android:textOff=" "
+        android:layout_marginBottom="@dimen/both_size_menu_item_vertical_margin"
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:background="@drawable/select_find_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/favorite_btn"
+        />
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/favorite_btn"
+        android:textAllCaps="false"
+        android:textOn=" "
+        android:textOff=" "
+        android:layout_marginBottom="@dimen/both_size_menu_item_vertical_margin"
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:background="@drawable/select_favorite_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/filter1_btn"
+        />
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/filter1_btn"
+        android:textAllCaps="false"
+        android:textOn=" "
+        android:textOff=" "
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:background="@drawable/select_favorite_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/both_size_menu_item_vertical_margin"
+        app:layout_constraintBottom_toTopOf="@+id/filter2_btn"
+        />
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/filter2_btn"
+        android:textAllCaps="false"
+        android:textOn=" "
+        android:textOff=" "
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:background="@drawable/select_favorite_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/both_size_menu_item_vertical_margin"
+        app:layout_constraintBottom_toTopOf="@+id/filter3_btn"
+        />
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/filter3_btn"
+        android:textAllCaps="false"
+        android:textOn=" "
+        android:textOff=" "
+        android:layout_marginBottom="@dimen/both_size_menu_item_vertical_margin_top_bottom"
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:background="@drawable/select_favorite_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

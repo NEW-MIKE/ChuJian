@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/select_setting_guide_btn_bg"
+    android:insetTop="@dimen/drawable_padding"
+    android:insetRight="@dimen/drawable_padding"
+    android:insetBottom="@dimen/drawable_padding"
+    android:insetLeft="@dimen/drawable_padding" />

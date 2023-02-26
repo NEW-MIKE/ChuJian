@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/popwindow_scroller_container_height"
+    android:background="@color/goto_pop_background">
+
+    <com.glide.chujian.view.ScrollPickerView.ScrollPickerView
+        android:id="@+id/scroll_picker_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/container_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/goto_scroll_background_item_style"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/scroller_half_cover_height"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:rotation="0.0"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/bg_gradient" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            app:layout_constraintHeight_percent="0.33"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/goto_pop_background" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/scroller_half_cover_height"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rotation="180.0"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_gradient" />
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            app:layout_constraintHeight_percent="0.33"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/goto_pop_background" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

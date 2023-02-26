@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:background="@drawable/setting_container_shape"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/background_tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginLeft="@dimen/setting_container_margin_end_start"
+                android:layout_marginTop="@dimen/setting_container_margin_top_bottom"
+                android:layout_marginRight="@dimen/setting_container_margin_end_start"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/guide_camera_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:maxLines="2"
+                android:textSize="@dimen/view_text_size"
+                android:text="@string/guidingcamera"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintLeft_toLeftOf="@+id/background_tv_1"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_1"/>
+
+            <com.glide.chujian.view.MaxSpinner
+                app:mSpinnerMaxItemNumber="@integer/spinner_drop_down_max_number"
+                android:id="@+id/select_guide_camera"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:spinnerMode="dropdown"
+                android:layout_marginStart="@dimen/setting_first_spinner_margin_start"
+                android:layout_marginEnd="10dp"
+                android:dropDownVerticalOffset="40dp"
+                android:background="@drawable/shape_spinner_drop_down"
+                app:layout_constraintWidth_percent="0.65"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_1"
+                app:layout_constraintRight_toLeftOf="@id/guide_camera_connect_btn"
+                />
+
+            <com.glide.chujian.view.SpinnerDropPicView
+                android:layout_width="@dimen/normal_item_height"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/select_guide_camera"
+                app:layout_constraintBottom_toBottomOf="@id/select_guide_camera"
+                app:layout_constraintEnd_toEndOf="@id/select_guide_camera"
+                android:background="@drawable/ic_spinner_drop_down_arrow"/>
+
+            <Switch
+                android:id="@+id/guide_camera_connect_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/setting_item_margin_end"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_1"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_1"/>
+            <!-- 第一行控件结束-->
+
+
+            <TextView
+                android:id="@+id/background_tv_2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_1" />
+
+            <TextView
+                android:id="@+id/bining_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/Binning"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintLeft_toLeftOf="@+id/background_tv_2"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_2"/>
+
+            <com.glide.chujian.view.MaxSpinner
+                app:mSpinnerMaxItemNumber="@integer/spinner_drop_down_max_number"
+                android:id="@+id/select_bining"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="40dp"
+                android:background="@drawable/shape_spinner_drop_down"
+                app:layout_constraintStart_toStartOf="@+id/select_guide_camera"
+                app:layout_constraintEnd_toEndOf="@id/guide_camera_connect_btn"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_2"
+                />
+
+            <com.glide.chujian.view.SpinnerDropPicView
+                android:layout_width="@dimen/normal_item_height"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/select_bining"
+                app:layout_constraintBottom_toBottomOf="@id/select_bining"
+                app:layout_constraintEnd_toEndOf="@id/select_bining"
+                android:background="@drawable/ic_spinner_drop_down_arrow"/>
+
+            <TextView
+                android:id="@+id/background_tv_2_1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_1"
+                app:layout_constraintStart_toStartOf="@id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_2" />
+
+
+
+            <TextView
+                android:id="@+id/focuse_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/focuser_device"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintLeft_toLeftOf="@+id/background_tv_2_1"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_2_1"/>
+
+            <View
+                android:id="@+id/focuser_blank_v"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                app:layout_constraintStart_toStartOf="@id/select_guide_camera"
+                app:layout_constraintEnd_toStartOf="@+id/select_focuse_backgroud"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1"
+                android:alpha="0"/>
+            <TextView
+                android:id="@+id/select_focuse_backgroud"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/setting_item_text_margin_top_bottom"
+                android:layout_marginBottom="@dimen/setting_item_text_margin_top_bottom"
+                android:background="@drawable/shape_spinner_drop_down"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_2_1"
+                app:layout_constraintEnd_toEndOf="@id/guide_camera_connect_btn"
+                app:layout_constraintStart_toEndOf="@+id/focuser_blank_v"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1" />
+
+            <EditText
+                android:id="@+id/focuse_degree_tv"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:inputType="number"
+                android:background="@drawable/shape_editview_bg"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="@id/select_focuse_backgroud"
+                app:layout_constraintEnd_toEndOf="@+id/select_focuse_backgroud"
+                app:layout_constraintTop_toTopOf="@+id/select_focuse_backgroud"
+                app:layout_constraintBottom_toBottomOf="@+id/select_focuse_backgroud"/>
+            <TextView
+                android:id="@+id/focuse_unit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="@string/mm"
+                android:textColor="@color/select_dis_enable_textcolor"
+                android:textSize="@dimen/view_text_size"
+                android:paddingEnd="@dimen/all_unit_margin_end"
+                app:layout_constraintEnd_toEndOf="@id/select_focuse_backgroud"
+                app:layout_constraintTop_toTopOf="@+id/select_focuse_backgroud"
+                app:layout_constraintBottom_toBottomOf="@+id/select_focuse_backgroud"/>
+
+            <!-- 第二行控件结束-->
+            <TextView
+                android:id="@+id/background_tv_3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_2_1" />
+
+            <TextView
+                android:id="@+id/gain_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/Gain"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_3"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_3"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_3"/>
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/gain_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:splitTrack="false"
+                android:maxHeight="8dp"
+                android:minHeight="8dp"
+                android:max="100"
+                android:min="0"
+                android:progressDrawable="@drawable/seekbar_progress_selector"
+                android:thumb="@drawable/seekbar_thumb_selector"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_3"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_3"
+                app:layout_constraintStart_toStartOf="@id/select_guide_camera"
+                app:layout_constraintEnd_toStartOf="@id/gain_degree_tv"/>
+
+
+            <TextView
+                android:id="@+id/gain_degree_tv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:text="10"
+                android:gravity="center"
+                android:background="@drawable/shape_spinner_drop_down"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintWidth_percent="0.23"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_3"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_3"
+                app:layout_constraintEnd_toEndOf="@+id/guide_camera_connect_btn"
+                app:layout_constraintLeft_toLeftOf="@+id/select_bining"/>
+
+            <!-- 第三行控件结束-->
+
+            <TextView
+                android:id="@+id/background_tv_4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_height_double"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_3" />
+
+            <TextView
+                android:id="@+id/max_ra_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/MaxRA"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_4"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_4"
+                app:layout_constraintBottom_toTopOf="@+id/max_ra_specification_tv"/>
+
+            <TextView
+                android:id="@+id/max_ra_backgroud"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:background="@drawable/shape_spinner_drop_down"
+                android:spinnerMode="dropdown"
+                android:textSize="@dimen/view_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/max_ra_tv"
+                app:layout_constraintEnd_toEndOf="@id/select_focuse_backgroud"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/select_focuse_backgroud"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_4" />
+
+            <EditText
+                android:id="@+id/max_ra_degree_tv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:gravity="center"
+                android:background="@drawable/shape_editview_bg"
+                android:inputType="number"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="@id/select_focuse_backgroud"
+                app:layout_constraintEnd_toEndOf="@id/max_dec_degree_tv"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_4"
+                app:layout_constraintBottom_toBottomOf="@+id/max_ra_tv"/>
+            <TextView
+                android:id="@+id/max_ra_unit_tv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:gravity="center"
+                android:text="@string/ms"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                android:paddingEnd="@dimen/all_unit_margin_end"
+                app:layout_constraintEnd_toEndOf="@+id/focuse_unit_tv"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_4"
+                app:layout_constraintBottom_toBottomOf="@+id/max_ra_tv"/>
+
+            <TextView
+                android:id="@+id/max_ra_specification_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/max_ra_description"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/view_text_size"
+                android:paddingBottom="@dimen/setting_des_margin_bottom"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_4"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_4"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_4"/>
+
+            <!-- 第四行控件结束-->
+
+
+            <TextView
+                android:id="@+id/background_tv_5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_height_double"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_4" />
+
+            <TextView
+                android:id="@+id/max_dec_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/MaxDEC"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_5"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_5"
+                app:layout_constraintBottom_toTopOf="@+id/max_dec_specification_tv"/>
+
+            <TextView
+                android:id="@+id/max_dec_backgroud"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:background="@drawable/shape_spinner_drop_down"
+                app:layout_constraintStart_toStartOf="@id/max_ra_backgroud"
+                app:layout_constraintEnd_toEndOf="@id/max_ra_backgroud"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_5"
+                app:layout_constraintBottom_toBottomOf="@+id/max_dec_tv"
+                />
+
+            <EditText
+                android:id="@+id/max_dec_degree_tv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:gravity="center"
+                android:background="@drawable/shape_editview_bg"
+                android:inputType="number"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="@id/select_focuse_backgroud"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_5"
+                app:layout_constraintEnd_toEndOf="@+id/focuse_degree_tv"
+                app:layout_constraintBottom_toBottomOf="@+id/max_dec_tv"/>
+            <TextView
+                android:id="@+id/max_dec_unit_tv"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:gravity="center"
+                android:text="@string/ms"
+                android:textColor="@color/select_dis_enable_textcolor"
+                android:textSize="@dimen/view_text_size"
+                android:paddingEnd="@dimen/all_unit_margin_end"
+                app:layout_constraintEnd_toEndOf="@id/max_ra_unit_tv"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_5"
+                app:layout_constraintBottom_toBottomOf="@+id/max_dec_tv"/>
+
+            <TextView
+                android:id="@+id/max_dec_specification_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/max_dec_description"
+                android:gravity="center|left"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/view_text_size"
+                android:paddingBottom="@dimen/setting_des_margin_bottom"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_5"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_5"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_5"/>
+
+            <!-- 第五行控件结束-->
+
+
+            <TextView
+                android:id="@+id/background_tv_6"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_5" />
+
+            <TextView
+                android:id="@+id/use_setting_from_last_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:enabled="false"
+                android:textSize="@dimen/view_text_size"
+                android:text="@string/usflt"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_6"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_6"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_6"/>
+
+
+            <Switch
+                android:id="@+id/use_setting_from_last_time_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/setting_item_margin_end"
+                android:enabled="false"
+                android:visibility="gone"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_6"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_6"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_6"/>
+            <!-- 第六行控件结束-->
+
+
+            <TextView
+                android:id="@+id/background_tv_7"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_height_double"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_6" />
+
+            <TextView
+                android:id="@+id/dithering_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/dithering"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_7"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_7"
+                app:layout_constraintBottom_toTopOf="@+id/dithering_specification_tv"/>
+
+
+            <TextView
+                android:id="@+id/dithering_specification_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/ditheringscription"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/view_text_size"
+                android:paddingBottom="@dimen/setting_des_margin_bottom"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_7"
+                app:layout_constraintStart_toStartOf="@id/background_tv_7"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_7" />
+
+            <Switch
+                android:id="@+id/dithering_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/setting_item_margin_end"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                app:layout_constraintTop_toTopOf="@+id/dithering_tv"
+                app:layout_constraintBottom_toBottomOf="@+id/dithering_tv"
+                app:layout_constraintRight_toRightOf="@id/background_tv_7"/>
+            <!-- 第七行控件结束-->
+
+
+            <TextView
+                android:id="@+id/background_tv_8"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_height_double"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_7" />
+
+            <TextView
+                android:id="@+id/dither_scale_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/DitherScale"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_8"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_8"
+                app:layout_constraintBottom_toTopOf="@+id/dither_scale_specification_tv"/>
+
+
+            <TextView
+                android:id="@+id/dither_scale_specification_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/scaleDescription"
+                android:textColor="@color/hint_text_color"
+                android:textSize="@dimen/view_text_size"
+                android:paddingBottom="@dimen/setting_des_margin_bottom"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_8"
+                app:layout_constraintStart_toStartOf="@id/background_tv_8"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_8"/>
+
+            <EditText
+                android:id="@+id/dither_scale_et"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:background="@drawable/shape_editview_bg"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                android:maxLines="1"
+                android:imeOptions="actionDone"
+                app:layout_constraintEnd_toEndOf="@id/select_focuse_backgroud"
+                app:layout_constraintStart_toStartOf="@id/select_focuse_backgroud"
+                app:layout_constraintTop_toTopOf="@+id/dither_scale_tv"
+                app:layout_constraintBottom_toBottomOf="@+id/dither_scale_tv"/>
+
+
+            <!-- 第八行控件结束-->
+
+            <TextView
+                android:id="@+id/background_tv_9"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_8" />
+
+            <TextView
+                android:id="@+id/mode_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/DitherMode"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_9"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_9"
+                app:layout_constraintBottom_toBottomOf="@id/background_tv_9"/>
+
+            <ToggleButton
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:id="@+id/ramdom_tbtn"
+                android:textAllCaps="false"
+                android:textOn="@string/Random"
+                android:textOff="@string/Random"
+                android:textColor="@color/select_setting_textcolor"
+                android:background="@drawable/select_setting_btn_bg"
+                android:textSize="@dimen/view_text_size"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintWidth_percent="0.23"
+                app:layout_constraintEnd_toStartOf="@+id/spiral_tbtn"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_9"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_9"/>
+
+
+            <ToggleButton
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:id="@+id/spiral_tbtn"
+                android:layout_marginStart="80dp"
+                android:textAllCaps="false"
+                android:textOn="@string/Spiral"
+                android:textOff="@string/Spiral"
+                android:textColor="@color/select_setting_textcolor"
+                android:background="@drawable/select_setting_btn_bg"
+                android:textSize="@dimen/view_text_size"
+                app:layout_constraintWidth_percent="0.23"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_9"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_9"
+                app:layout_constraintEnd_toEndOf="@id/select_bining"/>
+
+            <!-- 第九行控件结束-->
+
+
+            <TextView
+                android:id="@+id/background_tv_10"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:layout_marginBottom="@dimen/setting_container_margin_top_bottom"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_9" />
+
+            <TextView
+                android:id="@+id/raonly_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/RAOnly"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_10"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_10"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_10"/>
+
+
+            <Switch
+                android:id="@+id/ra_only_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/setting_item_margin_end"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_10"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_10"
+                app:layout_constraintRight_toRightOf="@id/background_tv_10"/>
+            <!-- 第十行控件结束-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

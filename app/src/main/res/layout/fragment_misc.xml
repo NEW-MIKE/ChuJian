@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:background="@drawable/setting_container_shape"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ip_connect_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/setting_container_margin_end_start"
+                android:layout_marginTop="@dimen/setting_container_margin_top_bottom"
+                android:layout_marginEnd="@dimen/setting_container_margin_end_start"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/background_tv_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/setting_tv_shape"
+                    android:layout_marginTop="@dimen/setting_container_margin_top_bottom"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <TextView
+                        android:id="@+id/ip_connect_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/setting_item_bg_height"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/setting_text_padding_end_start"
+                        android:text="@string/ip_disconnect"
+                        android:textSize="@dimen/view_text_size"
+                        android:textColor="@color/normal_text_color"
+                        app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                        app:layout_constraintTop_toTopOf="@+id/background_tv_1"
+                        app:layout_constraintBottom_toTopOf="@+id/ip_connect_info"/>
+                    <TextView
+                        android:id="@+id/ip_connect_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/setting_item_height_double"
+                        android:text="@string/check_disconnect_reason_no_wrap"
+                        android:gravity="center|left"
+                        android:paddingLeft="@dimen/setting_text_padding_end_start"
+                        android:textSize="@dimen/view_text_size"
+                        android:paddingBottom="@dimen/setting_des_margin_bottom"
+                        android:textColor="@color/hint_text_color"
+                        app:layout_constraintTop_toBottomOf="@id/ip_connect_tv"
+                        app:layout_constraintBottom_toBottomOf="@+id/background_tv_1"
+                        app:layout_constraintStart_toStartOf="@+id/background_tv_1"/>
+
+                    <TextView
+                        android:id="@+id/connect_by_ip_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/select_goto_btn_bg"
+                        android:gravity="center"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:text="@string/goto_ip_connect"
+                        android:textColor="@color/normal_text_color"
+                        android:textSize="@dimen/view_text_size"
+                        app:layout_constraintWidth_percent="0.23"
+                        app:layout_constraintBottom_toBottomOf="@+id/ip_connect_info"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/background_tv_1_1"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/setting_item_bg_height"
+                    android:layout_marginTop="@dimen/setting_item_margin_top"
+                    android:background="@drawable/setting_tv_shape"
+                    android:gravity="left|center"
+                    android:paddingLeft="@dimen/setting_text_padding_end_start"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                    app:layout_constraintEnd_toEndOf="@id/background_tv_1"
+                    app:layout_constraintTop_toBottomOf="@id/background_tv_1" />
+
+                <EditText
+                    android:id="@+id/ip_input_et"
+                    android:layout_width="200dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:background="@drawable/shape_editview_bg"
+                    android:textSize="@dimen/view_text_size"
+                    android:textColor="@color/select_dis_enable_textcolor"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="@dimen/setting_item_text_margin_top_bottom"
+                    android:layout_marginBottom="@dimen/setting_item_text_margin_top_bottom"
+                    app:layout_constraintStart_toStartOf="@id/background_tv_1_1"
+                    app:layout_constraintTop_toTopOf="@+id/background_tv_1_1"
+                    app:layout_constraintBottom_toBottomOf="@+id/background_tv_1_1"/>
+
+                <FrameLayout
+                    android:id="@+id/ip_connect_progress_container"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/setting_item_margin_end"
+                    android:layout_marginTop="@dimen/setting_item_text_margin_top_bottom"
+                    android:layout_marginBottom="@dimen/setting_item_text_margin_top_bottom"
+                    app:layout_constraintWidth_percent="0.23"
+                    app:layout_constraintTop_toTopOf="@+id/background_tv_1_1"
+                    app:layout_constraintBottom_toBottomOf="@+id/background_tv_1_1"
+                    app:layout_constraintStart_toEndOf="@+id/ip_input_et">
+
+                    <Button
+                        android:id="@+id/ip_connect_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/select_goto_btn_bg"
+                        android:text="@string/network_connect"
+                        android:textSize="@dimen/view_text_size"
+                        android:textColor="@color/normal_text_color"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:gravity="center"/>
+                </FrameLayout>
+
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:indeterminateBehavior="repeat"
+                    android:indeterminateDrawable="@drawable/dialog_loading"
+                    android:indeterminateOnly="true"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/ip_connect_progress_container"
+                    app:layout_constraintStart_toStartOf="@id/ip_connect_progress_container"
+                    app:layout_constraintEnd_toEndOf="@id/ip_connect_progress_container"
+                    app:layout_constraintTop_toTopOf="@id/ip_connect_progress_container"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- 第一行控件结束-->
+
+            <TextView
+                android:id="@+id/background_tv_2_1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_height_double"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/ip_connect_container"
+                app:layout_constraintEnd_toEndOf="@+id/ip_connect_container"
+                app:layout_constraintTop_toBottomOf="@id/ip_connect_container" />
+
+
+            <TextView
+                android:id="@+id/dc_one_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dc_circle_width"
+                android:layout_marginTop="@dimen/title_item_device_margin_end_start"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size"
+                android:text="output 1"
+                android:gravity="center"
+                app:layout_constraintEnd_toEndOf="@+id/dc_one_btn"
+                app:layout_constraintStart_toStartOf="@+id/dc_one_btn"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1" />
+            <TextView
+                android:id="@+id/dc_two_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dc_circle_width"
+                android:layout_marginTop="@dimen/title_item_device_margin_end_start"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size"
+                android:text="output 2"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1"
+                app:layout_constraintStart_toStartOf="@+id/dc_two_btn"
+                app:layout_constraintEnd_toEndOf="@+id/dc_two_btn"/>
+            <TextView
+                android:id="@+id/dc_three_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dc_circle_width"
+                android:layout_marginTop="@dimen/title_item_device_margin_end_start"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size"
+                android:text="output 3"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1"
+                app:layout_constraintStart_toStartOf="@+id/dc_three_btn"
+                app:layout_constraintEnd_toEndOf="@+id/dc_three_btn"/>
+            <TextView
+                android:id="@+id/dc_four_status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dc_circle_width"
+                android:layout_marginTop="@dimen/title_item_device_margin_end_start"
+                android:textColor="@color/normal_text_color"
+                android:textSize="@dimen/normal_text_size"
+                android:text="output 4"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1"
+                app:layout_constraintStart_toStartOf="@+id/dc_four_btn"
+                app:layout_constraintEnd_toEndOf="@+id/dc_four_btn"/>
+
+            <Switch
+                android:id="@+id/dc_one_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                android:layout_marginStart="@dimen/setting_item_margin_end"
+                android:layout_marginBottom="@dimen/title_item_device_margin_end_start"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_2_1"/>
+            <Switch
+                android:id="@+id/dc_two_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                app:layout_constraintEnd_toStartOf="@+id/dc_three_btn"
+                app:layout_constraintStart_toEndOf="@+id/dc_one_btn"
+                app:layout_constraintBottom_toBottomOf="@+id/dc_one_btn"/>
+            <Switch
+                android:id="@+id/dc_three_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                app:layout_constraintEnd_toStartOf="@+id/dc_four_btn"
+                app:layout_constraintStart_toEndOf="@+id/dc_two_btn"
+                app:layout_constraintBottom_toBottomOf="@+id/dc_one_btn"/>
+            <Switch
+                android:id="@+id/dc_four_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/setting_item_margin_end"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/dc_one_btn"/>
+
+            <TextView
+                android:id="@+id/background_tv_3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_2_1"
+                app:layout_constraintEnd_toEndOf="@id/background_tv_2_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_2_1" />
+
+            <TextView
+                android:id="@+id/shutdown_btn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/shutdown"
+                android:textColor="@color/reboot_setting_textcolor"
+                android:gravity="center"
+                android:textSize="@dimen/view_text_size"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_3"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_3"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_3"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_3"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

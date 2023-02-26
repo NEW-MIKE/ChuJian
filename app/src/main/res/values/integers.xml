@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="spinner_drop_down_max_number">5</integer>
+    <integer name="pop_margin_side">5</integer>
+    <integer name="slot_vertical_number">4</integer>
+    <integer name="goto_pop_width">550</integer>
+    <integer name="menu_pop_width">190</integer>
+    <integer name="menu_pop_margin_top">50</integer>
+    <integer name="browser_item_margin">18</integer>
+</resources>

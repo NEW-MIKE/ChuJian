@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimerActivity">
+
+    <TextView
+        android:id="@+id/choose_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="请选择日期"
+        android:gravity="center"
+        android:textSize="@dimen/view_text_size"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/shape_spinner_drop_down"
+        android:textColor="@color/select_dis_enable_textcolor"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/choose_date_value_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="@dimen/view_text_size"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/shape_spinner_drop_down"
+        android:textColor="@color/select_dis_enable_textcolor"
+        app:layout_constraintTop_toTopOf="@+id/choose_date_tv"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_date_tv"
+        app:layout_constraintStart_toEndOf="@+id/choose_date_tv"
+        android:layout_marginStart="10dp"/>
+
+
+
+    <TextView
+        android:id="@+id/message_mode_send_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textSize="@dimen/view_text_size"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@drawable/shape_spinner_drop_down"
+        android:textColor="@color/select_dis_enable_textcolor"
+        app:layout_constraintStart_toStartOf="@+id/choose_date_tv"
+        app:layout_constraintTop_toBottomOf="@+id/choose_date_tv"
+        android:layout_marginTop="10dp"
+        android:text="发送未来的寄语"
+        android:gravity="center|left"/>
+    <TextView
+        android:id="@+id/message_mode_receive_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:textSize="@dimen/view_text_size"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/shape_spinner_drop_down"
+        android:textColor="@color/select_dis_enable_textcolor"
+        app:layout_constraintStart_toEndOf="@+id/message_mode_send_tv"
+        app:layout_constraintTop_toBottomOf="@+id/choose_date_tv"
+        android:layout_marginTop="10dp"
+        android:text="接受来自过去的寄语"
+        android:gravity="center|left"/>
+
+    <EditText
+        android:id="@+id/msg_ed"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:textSize="@dimen/view_text_size"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/shape_editview_bg"
+        app:layout_constraintTop_toBottomOf="@+id/message_mode_send_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/receive_future_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/msg_ed"
+        app:layout_constraintBottom_toBottomOf="@+id/msg_ed"
+        app:layout_constraintStart_toStartOf="@+id/msg_ed"
+        app:layout_constraintEnd_toEndOf="@+id/msg_ed"/>
+    <TextView
+        android:id="@+id/send_msg_tv"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toBottomOf="@+id/msg_ed"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="发送"
+        android:textSize="@dimen/view_text_size"
+        android:background="@drawable/shape_spinner_drop_down"
+        android:textColor="@color/select_dis_enable_textcolor"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="60dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

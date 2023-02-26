@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp">
+
+    <com.glide.chujian.view.CheckableTextView
+        android:id="@+id/setting_item_image"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:padding="10dp"
+        android:layout_centerVertical="true"
+        />
+    <com.glide.chujian.view.CheckableTextView
+        android:id="@+id/setting_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:singleLine="true"
+        android:layout_marginLeft="3dp"
+        android:layout_toRightOf="@+id/setting_item_image"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/view_text_size" />
+
+    <View
+        android:id="@+id/settingpage_item_layout"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

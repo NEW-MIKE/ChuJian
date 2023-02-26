@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_height"
+    android:orientation="horizontal"
+    android:background="@color/all_blue_color"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="@color/normal_text_color"
+        android:id="@+id/left_tv"
+        android:textSize="@dimen/view_text_size"
+        app:layout_constraintStart_toEndOf="@+id/network_status_tv"/>
+
+    <TextView
+        android:id="@+id/network_status_tv"
+        android:layout_width="@dimen/network_circle_width"
+        android:layout_height="@dimen/network_circle_width"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="@dimen/title_item_device_margin_end_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:id="@+id/center_tv"
+        android:textSize="@dimen/view_text_size"
+        android:textColor="@color/normal_text_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="right"
+        android:id="@+id/right_tv"
+        android:layout_marginEnd="@dimen/title_item_device_margin_end_start"
+        android:textSize="@dimen/view_text_size"
+        android:textColor="@color/normal_text_color"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

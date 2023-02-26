@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/browser_item_normal_style"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/astro_lib_history_height"
+        android:textColor="@color/normal_text_color"
+        android:background="@color/normal_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center|left"
+        android:textSize="@dimen/view_text_size"
+        android:paddingStart="@dimen/astro_lib_history_margin"
+        android:id="@+id/search_item_tv"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

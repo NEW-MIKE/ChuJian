@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:background="@drawable/goto_background"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/astrolibrary_btn_go"
+        android:layout_width="@dimen/goto_title_btn_width"
+        android:layout_height="@dimen/normal_item_height"
+        android:gravity="center|left"
+        android:paddingStart="15dp"
+        android:text="@string/Go"
+        android:textAllCaps="false"
+        android:textColor="@color/select_dis_enable_textcolor"
+        android:textSize="@dimen/view_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="@dimen/goto_title_btn_width"
+        android:layout_height="0dp"
+        android:textSize="@dimen/view_text_size"
+        android:gravity="center|right"
+        android:paddingEnd="15dp"
+        android:text="@string/More"
+        android:textAllCaps="false"
+        android:textColor="@color/normal_text_color"
+        android:id="@+id/astrolibrary_btn_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/astrolibrary_btn_go"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:background="@color/all_blue_color"
+        android:id="@+id/target_top_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/astrolibrary_btn_go"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:background="@color/all_blue_color"
+        android:id="@+id/target_bottom_line"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/target_top_line" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/control_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/target_bottom_line">
+        <TextView
+            android:id="@+id/dialog_ra_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/popwindow_scroller_container_height"
+            android:textSize="@dimen/view_text_size"
+            android:layout_marginTop="@dimen/goto_item_margin_vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@id/west_btn"
+            android:text="@string/RA"
+            android:gravity="center"
+            android:textColor="@color/normal_text_color"/>
+
+        <include
+            android:layout_height="0dp"
+            android:layout_width="@dimen/goto_item_width"
+            android:id="@+id/hour_scroller"
+            layout="@layout/dialog_scroll_view_layout"
+            app:layout_constraintStart_toStartOf="@+id/zero_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_ra_tv"
+            app:layout_constraintTop_toTopOf="@+id/dialog_ra_tv"/>
+
+        <TextView
+            android:id="@+id/hour_scroller_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/normal_text_color"
+            android:gravity="center"
+            android:text="h"
+            android:textSize="@dimen/scroller_unit_text_size"
+            app:layout_constraintTop_toTopOf="@+id/hour_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/hour_scroller"
+            app:layout_constraintStart_toStartOf="@+id/zero_scroller_cover_btn"/>
+
+        <include
+            android:layout_height="0dp"
+            android:layout_width="@dimen/goto_item_width"
+            android:id="@+id/minute_scroller"
+            layout="@layout/dialog_scroll_view_layout"
+            android:layout_marginEnd="@dimen/normal_degree_margin"
+            app:layout_constraintEnd_toStartOf="@+id/minute_scroller_unit"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_ra_tv"
+            app:layout_constraintTop_toTopOf="@+id/dialog_ra_tv"/>
+
+        <TextView
+            android:id="@+id/minute_scroller_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/normal_text_color"
+            android:gravity="center"
+            android:text="m"
+            android:textSize="@dimen/scroller_unit_text_size"
+            android:layout_marginStart="5dp"
+            app:layout_constraintTop_toTopOf="@+id/minute_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/minute_scroller"
+            app:layout_constraintStart_toEndOf="@+id/hour_scroller_unit"
+            app:layout_constraintEnd_toStartOf="@+id/second_scroller_unit"/>
+
+
+        <include
+            android:layout_height="0dp"
+            android:layout_width="@dimen/goto_item_width"
+            android:id="@+id/second_scroller"
+            layout="@layout/dialog_scroll_view_layout"
+            android:layout_marginEnd="@dimen/normal_degree_margin"
+            app:layout_constraintEnd_toStartOf="@+id/second_scroller_unit"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_ra_tv"
+            app:layout_constraintTop_toTopOf="@+id/dialog_ra_tv"/>
+
+        <TextView
+            android:id="@+id/second_scroller_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/normal_text_color"
+            android:gravity="center"
+            android:text="s"
+            android:textSize="@dimen/scroller_unit_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/east_btn"
+            app:layout_constraintTop_toTopOf="@+id/second_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/second_scroller"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/popwindow_scroller_container_height"
+            android:textSize="@dimen/view_text_size"
+            android:layout_marginTop="@dimen/goto_item_margin_vertical"
+            app:layout_constraintTop_toBottomOf="@id/dialog_ra_tv"
+            app:layout_constraintStart_toStartOf="@+id/dialog_ra_tv"
+            android:text="@string/DEC"
+            android:id="@+id/dialog_dec_tv"
+            android:gravity="center"
+            android:textColor="@color/normal_text_color"/>
+
+
+        <include
+            android:layout_height="0dp"
+            android:layout_width="@dimen/goto_item_width"
+            android:id="@+id/zero_scroller"
+            android:layout_marginLeft="10dp"
+            layout="@layout/dialog_scroll_view_layout"
+            app:layout_constraintStart_toEndOf="@+id/dialog_dec_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_dec_tv"
+            app:layout_constraintTop_toTopOf="@+id/dialog_dec_tv"/>
+
+        <TextView
+            android:id="@+id/zero_scroller_cover_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/normal_text_color"
+            android:gravity="center"
+            android:text="°"
+            android:textSize="@dimen/view_text_size"
+            android:layout_marginStart="@dimen/normal_degree_margin"
+            app:layout_constraintTop_toTopOf="@+id/zero_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/zero_scroller"
+            app:layout_constraintStart_toEndOf="@+id/zero_scroller"/>
+
+        <include
+            android:layout_height="0dp"
+            android:layout_width="@dimen/goto_item_width"
+            android:id="@+id/one_dot_scroller"
+            layout="@layout/dialog_scroll_view_layout"
+            app:layout_constraintStart_toStartOf="@+id/minute_scroller"
+            app:layout_constraintEnd_toEndOf="@+id/minute_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_dec_tv"
+            app:layout_constraintTop_toTopOf="@+id/dialog_dec_tv"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/normal_text_color"
+            android:gravity="center"
+            android:text="'"
+            android:textSize="@dimen/view_text_size"
+            android:layout_marginStart="@dimen/normal_degree_margin"
+            app:layout_constraintTop_toTopOf="@+id/one_dot_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/one_dot_scroller"
+            app:layout_constraintStart_toEndOf="@+id/one_dot_scroller"/>
+
+
+        <include
+            android:layout_height="0dp"
+            android:layout_width="@dimen/goto_item_width"
+            android:id="@+id/two_dot_scroller"
+            layout="@layout/dialog_scroll_view_layout"
+            app:layout_constraintStart_toStartOf="@+id/second_scroller"
+            app:layout_constraintEnd_toEndOf="@+id/second_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_dec_tv"
+            app:layout_constraintTop_toTopOf="@+id/dialog_dec_tv"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:textColor="@color/normal_text_color"
+            android:gravity="center"
+            android:text="''"
+            android:textSize="@dimen/view_text_size"
+            android:layout_marginStart="@dimen/normal_degree_margin"
+            app:layout_constraintTop_toTopOf="@+id/two_dot_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/two_dot_scroller"
+            app:layout_constraintStart_toEndOf="@+id/two_dot_scroller"/>
+
+
+        <ToggleButton
+            android:id="@+id/north_btn"
+            android:layout_width="@dimen/goto_speed_scroller_width"
+            android:layout_height="@dimen/goto_btn_height"
+            android:textSize="@dimen/view_text_size"
+            android:layout_marginTop="@dimen/goto_item_margin_vertical"
+            app:layout_constraintTop_toBottomOf="@id/dialog_dec_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textOn="@string/north"
+            android:textOff="@string/north"
+            android:background="@drawable/select_goto_btn_bg"
+            android:textColor="@color/normal_text_color"/>
+
+
+        <include
+            android:layout_height="@dimen/normal_btn_height"
+            android:layout_width="@dimen/goto_speed_scroller_width"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:id="@+id/speed_scroller"
+            layout="@layout/dialog_scroll_view_layout"
+            app:layout_constraintStart_toEndOf="@+id/west_btn"
+            app:layout_constraintEnd_toStartOf="@+id/east_btn"
+            app:layout_constraintTop_toBottomOf="@+id/north_btn"/>
+
+        <ToggleButton
+            android:id="@+id/south_btn"
+            android:layout_width="@dimen/goto_speed_scroller_width"
+            android:layout_height="@dimen/goto_btn_height"
+            android:textSize="@dimen/view_text_size"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintTop_toBottomOf="@id/speed_scroller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textOn="@string/south"
+            android:textOff="@string/south"
+            android:background="@drawable/select_goto_btn_bg"
+            android:textColor="@color/normal_text_color"/>
+
+        <ToggleButton
+            android:id="@+id/west_btn"
+            android:layout_width="@dimen/goto_speed_scroller_width"
+            android:layout_height="@dimen/goto_btn_height"
+            android:textSize="@dimen/view_text_size"
+            android:textColor="@color/normal_text_color"
+            android:textOn="@string/west"
+            android:textOff="@string/west"
+            android:layout_marginStart="@dimen/goto_item_margin_start_end_btn"
+            android:background="@drawable/select_goto_btn_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/speed_scroller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/speed_scroller"
+            app:layout_constraintTop_toTopOf="@id/speed_scroller" />
+
+        <ToggleButton
+            android:id="@+id/east_btn"
+            android:layout_width="@dimen/goto_speed_scroller_width"
+            android:layout_height="@dimen/goto_btn_height"
+            android:textSize="@dimen/view_text_size"
+            android:layout_marginEnd="@dimen/goto_item_margin_start_end_btn"
+            app:layout_constraintTop_toTopOf="@id/speed_scroller"
+            app:layout_constraintStart_toEndOf="@id/speed_scroller"
+            app:layout_constraintBottom_toBottomOf="@+id/speed_scroller"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textOn="@string/east"
+            android:textOff="@string/east"
+            android:background="@drawable/select_goto_btn_bg"
+            android:textColor="@color/normal_text_color"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:text="@string/mount_is_parked"
+        android:gravity="center"
+        android:background="@color/goto_park_cover_background"
+        android:textSize="25dp"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/target_bottom_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/park_cover"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

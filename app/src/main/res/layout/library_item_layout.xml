@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="110dp"
+    android:id="@+id/library_container_layout"
+    android:background="@color/normal_background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_list_repo_action_container"
+        android:layout_width="@dimen/library_container_back_width"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:layout_marginEnd="@dimen/rv_scroller_width"
+        android:background="@drawable/astro_library_goto_favorite_bg"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/go_to_target"
+            android:layout_width="@dimen/library_swipe_item_size"
+            android:layout_height="@dimen/library_swipe_item_size"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@drawable/select_go_btn_bg"
+            android:drawablePadding="1px"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/line"
+            />
+        <View
+            android:id="@+id/line"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/all_blue_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ToggleButton
+            android:id="@+id/add_to_favorite_tv"
+            android:layout_width="@dimen/library_swipe_item_size"
+            android:layout_height="@dimen/library_swipe_item_size"
+            android:gravity="center"
+            android:padding="12dp"
+            android:textOn=" "
+            android:textOff=" "
+            android:layout_gravity="center"
+            android:background="@drawable/select_favorite_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/line"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/swipLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/normal_background"
+        android:clickable="true">
+        <ImageView
+            android:id="@+id/star_iv"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/library_pic"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_marginStart="20dp"
+            android:id="@+id/cl_control"
+            android:layout_width="280dp"
+            app:layout_constraintStart_toEndOf="@+id/star_iv"
+            android:layout_height="match_parent">
+            <TextView
+                android:textColor="@color/all_blue_color"
+                android:id="@+id/star_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintHorizontal_weight="0.33"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="left"
+                android:text="IC 4592"/>
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/ra_dec_tv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:maxLines="6"
+                android:textColor="@color/normal_text_color"
+                app:layout_constraintHorizontal_weight="0.33"
+                android:text="RA 16H 12M 17s   alt 48"
+                app:layout_constraintTop_toBottomOf="@id/star_name_tv"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.glide.chujian.view.BrokenLineView
+            android:layout_marginStart="20dp"
+            android:id="@+id/brokenLineView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:dbz_content_color="#17894E"
+            app:dbz_line_color="#17894E"
+            app:dbz_xy_line_color="#cccccc"
+            app:dbz_xy_line_width="1dp"
+            app:dbz_xy_text_color="#494848"
+            app:dbz_xy_text_size="13dp"
+            app:layout_constraintStart_toEndOf="@+id/cl_control"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_marginStart="20dp"
+            android:id="@+id/chart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toEndOf="@+id/cl_control"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <View
+            android:id="@+id/chart_y_line"
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            app:layout_constraintStart_toStartOf="@+id/chart"/>
+
+        <TextView
+            android:text="@string/astrolibrary_chart_y"
+            android:id="@+id/y_chart_description"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toStartOf="@+id/chart_y_line"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.glide.chujian.view.TargetLocationView
+            android:id="@+id/max_location_v"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@+id/chart"
+            app:layout_constraintEnd_toEndOf="@+id/chart"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/normal_background"
+    tools:context=".AstroLibraryActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/title_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <FrameLayout
+            android:id="@+id/title_frame_cover"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+            <include
+                android:id="@+id/title"
+                layout="@layout/screen_library_title_layout"/>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/search_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/title_frame_cover"
+            app:layout_constraintStart_toStartOf="parent" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/browser_title_item_size"
+                android:gravity="center"
+                android:id="@+id/exit_search_btn"
+                android:layout_marginStart="@dimen/astro_lib_history_margin"
+                android:text="@string/delete_cancel"
+                android:textSize="@dimen/view_text_size"
+                app:layout_constraintTop_toTopOf="@+id/library_search_sv"
+                app:layout_constraintBottom_toBottomOf="@+id/library_search_sv"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <EditText
+                android:background="@drawable/task_tv_background_shape"
+                android:id="@+id/library_search_sv"
+                android:layout_width="0dp"
+                android:paddingStart="@dimen/library_search_margin_start"
+                android:hint="@string/astrolib_search_hint"
+                android:textColor="@color/normal_text_color"
+                android:textColorHint="@color/hint_text_color"
+                android:singleLine="true"
+                android:layout_height="@dimen/library_search_view_height"
+                android:layout_marginStart="@dimen/astro_lib_history_margin"
+                android:layout_marginTop="@dimen/astro_lib_history_margin"
+                android:layout_marginEnd="@dimen/astro_lib_history_margin"
+                app:layout_constraintStart_toEndOf="@+id/exit_search_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageButton
+                android:layout_width="@dimen/browser_title_item_size"
+                android:layout_height="@dimen/browser_title_item_size"
+                android:gravity="center"
+                android:id="@+id/clear_btn"
+                android:layout_marginEnd="@dimen/title_item_device_margin_end_start"
+                android:background="@drawable/select_close_btn_bg"
+                app:layout_constraintTop_toTopOf="@+id/library_search_sv"
+                app:layout_constraintBottom_toBottomOf="@+id/library_search_sv"
+                app:layout_constraintEnd_toEndOf="@+id/library_search_sv"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="@dimen/astro_lib_history_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_container"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/history_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/astro_lib_history_margin"
+            android:layout_marginEnd="@dimen/astro_lib_history_margin"
+            android:layout_marginStart="@dimen/astro_lib_history_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bottom_line">
+            <TextView
+                android:id="@+id/history_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/astro_lib_history_height"
+                android:text="@string/astrolib_search_history"
+                android:textColor="@color/normal_text_color"
+                android:paddingStart="@dimen/astro_lib_history_margin"
+                android:textSize="@dimen/view_text_size"
+                android:background="@color/screen_spinner_background"
+                android:gravity="center|left"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <ImageButton
+                android:layout_width="@dimen/browser_title_item_size"
+                android:layout_height="@dimen/browser_title_item_size"
+                android:gravity="center"
+                android:id="@+id/delete_history_btn"
+                android:layout_marginEnd="@dimen/title_item_device_margin_end_start"
+                android:background="@drawable/select_dustbin_btn_bg"
+                app:layout_constraintTop_toTopOf="@+id/history_title_tv"
+                app:layout_constraintBottom_toBottomOf="@+id/history_title_tv"
+                app:layout_constraintEnd_toEndOf="@+id/history_title_tv"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/history_search_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/history_title_tv"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/right_layout_container"
+        android:layout_height="0dp"
+        android:layout_width="@dimen/both_side_menu_width"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+        app:layout_constraintTop_toBottomOf="@id/title_container">
+        <include
+            android:layout_height="match_parent"
+            android:layout_width="@dimen/both_side_menu_width"
+            android:id="@+id/right_layout"
+            layout="@layout/screen_library_right_layout" />
+    </FrameLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ListSwipeRv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        style="@style/recy_vertical_style"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_container"
+        app:layout_constraintBottom_toTopOf="@+id/bottomContainer"
+        app:layout_constraintEnd_toStartOf="@id/right_layout_container"/>
+
+    <FrameLayout
+        android:id="@+id/bottomContainer"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/title_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <include
+            android:id="@+id/bottom"
+            layout="@layout/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height"/>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

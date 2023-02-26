@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/part_width_align"
+    android:layout_height="match_parent"
+    android:background="@color/side_menu_background_color"
+    tools:context=".ScreenMainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ra_dec_container"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/go_to_btn">
+        <TextView
+            android:id="@+id/ra_dec_name"
+            android:layout_width="22dp"
+            android:layout_height="@dimen/menu_item_view_size"
+            android:gravity="center|left"
+            android:maxLines="2"
+            android:textSize="@dimen/side_ra_dec_text_size"
+            android:text="RA: \nDEC: "
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ra_dec_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/ra_dec_value"
+            android:layout_width="30dp"
+            android:layout_height="@dimen/menu_item_view_size"
+            android:gravity="center|right"
+            android:maxLines="2"
+            android:textSize="@dimen/side_ra_dec_text_size"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ra_dec_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/go_to_btn"
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:background="@drawable/select_go_btn_bg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/star_btn"
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:textOn=" "
+        android:textOff=" "
+        android:background="@drawable/select_star_profile_btn_bg"
+        android:layout_marginBottom="@dimen/both_size_menu_item_vertical_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guide_btn" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/guide_btn"
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:background="@drawable/select_guide_screen_btn_bg"
+        android:textOn=" "
+        android:textOff=" "
+        android:layout_marginBottom="@dimen/both_size_menu_item_vertical_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/root_browser_btn"
+        />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/root_browser_btn"
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:layout_marginBottom="@dimen/both_size_menu_item_vertical_margin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/setting_btn"
+        android:background="@drawable/select_folder_btn_bg"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/setting_btn"
+        android:layout_width="@dimen/menu_item_view_size"
+        android:layout_height="@dimen/menu_item_view_size"
+        android:layout_marginBottom="@dimen/both_size_menu_item_vertical_margin_top_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/select_setting_panel_btn_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

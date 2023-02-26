@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:background="@drawable/setting_container_shape"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/background_tv_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginLeft="@dimen/setting_container_margin_end_start"
+                android:layout_marginTop="@dimen/setting_container_margin_top_bottom"
+                android:layout_marginRight="@dimen/setting_container_margin_end_start"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/filter_wheel_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/filterwheel"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintLeft_toLeftOf="@+id/background_tv_1"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_1"/>
+
+            <com.glide.chujian.view.MaxSpinner
+                app:mSpinnerMaxItemNumber="@integer/spinner_drop_down_max_number"
+                android:id="@+id/select_filter_wheel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:spinnerMode="dropdown"
+                android:layout_marginStart="@dimen/setting_first_spinner_margin_start"
+                android:layout_marginEnd="10dp"
+                android:dropDownVerticalOffset="40dp"
+                android:background="@drawable/shape_spinner_drop_down"
+                app:layout_constraintWidth_percent="0.65"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_1"
+                app:layout_constraintRight_toLeftOf="@id/filter_wheel_connect_btn"
+                />
+
+            <com.glide.chujian.view.SpinnerDropPicView
+                android:layout_width="@dimen/normal_item_height"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/select_filter_wheel"
+                app:layout_constraintBottom_toBottomOf="@id/select_filter_wheel"
+                app:layout_constraintEnd_toEndOf="@id/select_filter_wheel"
+                android:background="@drawable/ic_spinner_drop_down_arrow"/>
+            <Switch
+                android:id="@+id/filter_wheel_connect_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/setting_item_margin_end"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_1"/>
+
+            <!-- 第一行控件结束-->
+
+            <TextView
+                android:id="@+id/background_tv_2_1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_2" />
+
+            <TextView
+                android:id="@+id/position_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/position"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintLeft_toLeftOf="@+id/background_tv_2_1"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_2_1"/>
+
+            <View
+                android:id="@+id/postion_blank_v"
+                android:layout_width="0dp"
+                android:layout_height="1px"
+                android:alpha="0"
+                app:layout_constraintEnd_toStartOf="@+id/select_position"
+                app:layout_constraintStart_toStartOf="@+id/select_filter_wheel"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1"/>
+
+
+            <com.glide.chujian.view.MaxSpinner
+                app:mSpinnerMaxItemNumber="@integer/spinner_drop_down_max_number"
+                android:id="@+id/select_position"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="40dp"
+                android:background="@drawable/shape_spinner_drop_down"
+                app:layout_constraintStart_toEndOf="@+id/postion_blank_v"
+                app:layout_constraintEnd_toEndOf="@id/filter_wheel_connect_btn"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_2_1"
+                />
+
+            <com.glide.chujian.view.SpinnerDropPicView
+                android:layout_width="@dimen/normal_item_height"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/select_position"
+                app:layout_constraintBottom_toBottomOf="@id/select_position"
+                app:layout_constraintEnd_toEndOf="@id/select_position"
+                android:background="@drawable/ic_spinner_drop_down_arrow"/>
+
+
+            <TextView
+                android:id="@+id/background_tv_1_1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_1"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_1" />
+
+            <TextView
+                android:id="@+id/calibrating_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/calibrating"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_1_1"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_1_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_1_1"/>
+
+            <Button
+                android:id="@+id/calibrating_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:textColor="@color/select_dis_enable_textcolor"
+                android:background="@drawable/select_normal_btn_bg"
+                android:text="@string/calibrating"
+                android:textAllCaps="false"
+                android:textSize="@dimen/view_text_size"
+                app:layout_constraintWidth_percent="0.23"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_1_1"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_1_1"
+                app:layout_constraintEnd_toEndOf="@id/filter_wheel_connect_btn"/>
+
+            <TextView
+                android:id="@+id/background_tv_2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_1"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_1_1" />
+
+            <TextView
+                android:id="@+id/unidirectional_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/unidirectional"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_2"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_2"/>
+
+
+            <Switch
+                android:id="@+id/unidirectional_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/setting_item_margin_end"
+                android:thumb="@drawable/switch_ios_thumb_selector"
+                android:track="@drawable/switch_ios_track_selector"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_2"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_2"
+                app:layout_constraintRight_toRightOf="@id/background_tv_2"/>
+
+
+            <!-- 第二行控件结束-->
+
+
+            <!-- 第三行控件结束-->
+
+            <TextView
+                android:id="@+id/background_tv_4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/setting_item_bg_height"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:background="@drawable/setting_tv_shape"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_1"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_2_1" />
+
+            <TextView
+                android:id="@+id/slot_number_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="@dimen/setting_text_padding_end_start"
+                android:gravity="left|center"
+                android:paddingLeft="@dimen/setting_text_padding_end_start"
+                android:text="@string/slotnumber"
+                android:textSize="@dimen/view_text_size"
+                android:textColor="@color/select_dis_enable_textcolor"
+                app:layout_constraintStart_toStartOf="@id/background_tv_4"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_4"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_4"/>
+
+            <com.glide.chujian.view.MaxSpinner
+                app:mSpinnerMaxItemNumber="@integer/spinner_drop_down_max_number"
+                android:id="@+id/select_slot_number"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/normal_item_height"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="40dp"
+                android:background="@drawable/shape_spinner_drop_down"
+                app:layout_constraintStart_toStartOf="@id/select_position"
+                app:layout_constraintEnd_toEndOf="@id/select_position"
+                app:layout_constraintTop_toTopOf="@+id/background_tv_4"
+                app:layout_constraintBottom_toBottomOf="@+id/background_tv_4"
+                />
+
+            <com.glide.chujian.view.SpinnerDropPicView
+                android:layout_width="@dimen/normal_item_height"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toTopOf="@id/select_slot_number"
+                app:layout_constraintBottom_toBottomOf="@id/select_slot_number"
+                app:layout_constraintEnd_toEndOf="@id/select_slot_number"
+                android:background="@drawable/ic_spinner_drop_down_arrow"/>
+            <!-- 第四行控件结束-->
+
+            <RelativeLayout
+                android:id="@+id/slot_number_rv_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/setting_item_margin_top"
+                android:layout_marginBottom="@dimen/setting_container_margin_top_bottom"
+                app:layout_constraintEnd_toEndOf="@+id/background_tv_1"
+                app:layout_constraintStart_toStartOf="@+id/background_tv_1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/background_tv_4">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/slot_number_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/setting_tv_shape"/>
+            </RelativeLayout>
+
+            <!-- 第五行控件结束-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

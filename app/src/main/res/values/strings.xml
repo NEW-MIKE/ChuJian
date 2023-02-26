@@ -1,0 +1,232 @@
+<resources>
+    <item name="tag_first" type="id"></item>
+    <string name="app_name">初见</string>
+    <string name="network">Network</string>
+    <string name="historgram">Historgram</string>
+    <string name="guidechart">Guide</string>
+    <string name="starprofile">Star Profile</string>
+    <string name="chart_label">chart</string>
+    <string name="favorite">Favorite</string>
+    <string name="connecting">网络连接中....</string>
+    <string name="datareading">数据读取中</string>
+    <string name="connect_success">network connect success</string>
+    <string name="network_fail">network connect fail</string>
+    <string name="network_success">network connected</string>
+    <string name="data_loading">data loading</string>
+    <string name="custom">custom</string>
+    <string name="no_file_selected">no file selected</string>
+
+    <string name="delete_confirm">你确定要删除吗？</string>
+    <string name="legal_input_range">合法输入范围是：</string>
+    <string name="delete_sure">删除</string>
+    <string name="normal_sure">确定</string>
+    <string name="delete_cancel">取消</string>
+    <!--Messages-->
+    <string name="downloaded">Downloaded</string>
+    <string name="canread">Can read</string>
+
+    <string name="max_ra_description">Longest length of pulse to send in RA </string>
+    <string name="max_dec_description">Longest length of pulse to send in Declination, increase if drift is last  </string>
+    <string name="mount_is_parked">PARKED</string>
+
+    <string name="south">SOUTH</string>
+    <string name="north">NORTH</string>
+    <string name="east">EAST</string>
+    <string name="west">WEST</string>
+
+    <!-- screen main activity string  -->
+    <string name="Go">Go</string>
+    <string name="More">More</string>
+    <string name="singleTrigger">单帧触发</string>
+    <string name="videoMode">视频模式</string>
+    <string name="planPhoto">计划拍摄</string>
+    <string name="realTimeStack">实时叠加</string>
+    <string name="autoFocuse">自动调焦</string>
+
+    <string name="target_temp">TEC</string>
+    <string name="main_camera_not_connect">相机未连接</string>
+
+    <string name="downloading">Downloading</string>
+    <string name="photo_compound">Downloading</string>
+
+    <!--device main activity string  -->
+    <string name="maincamera">Main Camera</string>
+    <string name="main_camera_status">Main Camera</string>
+    <string name="guide_camera_status">Guide Camera</string>
+    <string name="date">Date</string>
+    <string name="guidingcamera">Guiding Camera</string>
+    <string name="longitude">Longitude</string>
+    <string name="scope_longitude">Longitude:</string>
+    <string name="latitude">Latitude</string>
+    <string name="scope_latitude">Latitude:</string>
+    <string name="focallength">Main/Guide Scope FL</string>
+    <string name="mm">mm</string>
+    <string name="filterwheel">Filter Wheel</string>
+    <string name="focuser">Focuser</string>
+    <string name="focuser_device">Focuser</string>
+    <string name="deviceconnection">Device Connection</string>
+    <string name="enter">Enter</string>
+    <string name="minute">s</string>
+
+    <!-- guide activity string  -->
+
+    <string name="calibrating">Calibrating</string>
+    <string name="calibrating_fail">Calibrating Fail</string>
+    <string name="guide_start_lost">Star Lost</string>
+    <string name="guiding_stop">Guiding Stop</string>
+    <string name="guiding_refreshing">Looping</string>
+    <string name="guiding_processing">Guiding</string>
+    <string name="star_selected">Star Selected</string>
+
+    <!-- browser activity string  -->
+
+    <string name="video_save_success">视频存储成功</string>
+    <string name="video_save_fail">视频存储失败</string>
+    <string name="video_path_error">视频文件路径错误</string>
+
+    <!-- astro library activity string  -->
+
+    <!-- goto string  -->
+    <string name="stop_go">停止</string>
+    <string name="moving_to_target_location">目标位置: </string>
+    <string name="can_not_goto_target">目标位置不可达 </string>
+    <string name="current_location">当前位置： </string>
+    <string name="current_is_park">当前是park状态，是否要unpark</string>
+    <string name="cancel_unpark">No</string>
+    <string name="confirm_unpark">Yes</string>
+    <string name="normal_cancel">取消</string>
+    <string name="check_disconnect_reason">1.盒子开关是否开启\n2.App是否连上了盒子\n3.通过IP连接</string>
+    <string name="check_disconnect_reason_no_wrap">1.盒子开关是否开启 2.App是否连上了盒子 3.通过IP连接</string>
+    <string name="check_disconnect_title">网络连接失败，请检查：</string>
+
+    <!-- setting activity string  -->
+
+
+    <!-- task activity string  -->
+    <string name="FieldType">Field Type</string>
+    <string name="Light">Light</string>
+    <string name="Bias">Bias</string>
+    <string name="Dark">Dark</string>
+    <string name="Flat">Flat</string>
+    <string name="ExposeTime">Exposure Time</string>
+    <string name="Total">Total #</string>
+    <string name="TaskTotal">Total</string>
+    <string name="Bin">Bin</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Target">Target</string>
+    <string name="DelayStart">Delay start</string>
+    <string name="SequenceMode">Sequence Mode</string>
+    <string name="StartGuiding">Start Guiding</string>
+    <string name="SlewToTarget">Slew to target</string>
+    <string name="CenterTarget">Center target</string>
+    <string name="AutoFocuseTarget">Auto focuse target</string>
+    <string name="pouf">Power off upon finish</string>
+    <string name="rsposition">Reset park position</string>
+    <string name="Reset">Reset</string>
+    <!-- fragment string  -->
+    <string name="unidirectional">Unidirectional</string>
+    <string name="position">Position</string>
+    <string name="slotnumber">Slot number</string>
+    <!-- focuser string  -->
+    <string name="reserved">reserved</string>
+    <string name="temperature">temperature</string>
+    <string name="current_position">current position</string>
+    <string name="target_position">target position</string>
+    <string name="focuser_goto">goto</string>
+    <string name="focuser_stop">stop</string>
+    <string name="maxstep">max step</string>
+    <string name="coarse_step">coarse</string>
+    <string name="fine_step">fine</string>
+    <string name="beep">beep</string>
+
+
+    <string name="Binning">Binning</string>
+    <string name="Gain">Gain</string>
+    <string name="Exp">Exp</string>
+    <string name="MaxRA">Max RA</string>
+    <string name="ms">ms</string>
+    <string name="MaxDEC">Max DEC</string>
+    <string name="usflt">Use setting from last time</string>
+    <string name="dithering">Dithering</string>
+    <string name="dither">dither</string>
+    <string name="ditheringscription">Dithering is only effective during light frame sesson of sequence shooting, live stacking and multi-target</string>
+    <string name="DitherScale">Dither Scale</string>
+    <string name="scaleDescription">Scale for dither commands. Default = 1.0 (0.1 - 100)</string>
+    <string name="DitherMode">Dither Mode</string>
+    <string name="Random">Random</string>
+    <string name="Spiral">Spiral</string>
+    <string name="RAOnly">RA Only</string>
+    <string name="Resolution">Resolution</string>
+    <string name="ConversionGain">Conversion Gain</string>
+    <string name="HCG">HCG</string>
+    <string name="LCG">LCG</string>
+    <string name="HDR">HDR</string>
+    <string name="LowNoiseMode">Low Noise Mode</string>
+    <string name="Cooling">Cooling</string>
+    <string name="Fan">Fan</string>
+    <string name="TargetTemp">Target Temp</string>
+    <string name="Heating">Heating</string>
+    <string name="OFF">Off</string>
+    <string name="High">High</string>
+    <string name="UART">UART</string>
+    <string name="uart_tbtn_off">Disconnect</string>
+    <string name="uart_tbtn_on">Connected</string>
+    <string name="BaudRate">Baud Rate</string>
+    <string name="RA">RA</string>
+    <string name="Scope_RA">RA:</string>
+    <string name="DEC">DEC</string>
+    <string name="Scope_DEC">DEC:</string>
+    <string name="TimeZone">Time Zone:</string>
+    <string name="Time">Time</string>
+    <string name="Scope_Time">Time:</string>
+    <string name="GuidingSpeed">Guiding Speed</string>
+    <string name="Tracking">Tracking</string>
+    <string name="TrackingRate">Tracking Rate</string>
+    <string name="Sidereal">Sidereal</string>
+    <string name="Solar">Solar</string>
+    <string name="Lunar">Lunar</string>
+    <string name="Park">Park</string>
+    <string name="unpark">Unpark</string>
+    <string name="mount_info">Mount Info</string>
+    <string name="folder_manager">folder manager</string>
+    <string name="astro_library">Astro Library</string>
+    <string name="azimuth">AZ</string>
+
+    <string name="counter_clockwise">Counter Clockwise</string>
+
+    <!-- menu string  -->
+    <string name="menu_main_camera">Main Camera</string>
+    <string name="menu_guide_camera">Guide Camera</string>
+    <string name="menu_filter_wheel_camera">Filter Wheel</string>
+    <string name="menu_auto_focuser_camera">Auto Focuser</string>
+    <string name="menu_telescope_camera">Telescope</string>
+    <string name="menu_misc_camera">Misc</string>
+    <string name="capture_frame_success">Capture Frame Success</string>
+    <string name="astrolibrary_chart_y">高度/°</string>
+
+
+    <string name="device_not_connect">设备操作失败</string>
+    <string name="video_mode_timeout">进入视频模式失败，请检查设备连接，曝光时间</string>
+
+    <string name="can_not_start_camera_push_mode">can not start camera push mode</string>
+    <string name="temperature_value_invalid">temperature value invalid</string>
+    <string name="exposure_time_invalid">exposure time invalid</string>
+    <string name="picture_is_invalid">picture is invalid</string>
+    <string name="ip_disconnect">ip connect</string>
+    <string name="ip_connected">connected</string>
+    <string name="shutdown">shutdown</string>
+    <string name="shutdown_main">shutdown?</string>
+    <string name="goto_ip_connect">connect by IP</string>
+    <string name="network_connect">network connect</string>
+    <string name="capture_frame_fail">capture frame fail</string>
+    <string name="frame_is_downloading">frame is downloading</string>
+    <string name="astrolib_search_hint">please enter star name/number</string>
+    <string name="astrolib_search_history">history list</string>
+    <string name="file_has_choosed">choosed</string>
+    <string name="mid_row">midrow</string>
+    <string name="avg_row">avgrow</string>
+    <string name="avg_col">avgcol</string>
+    <string name="video_transform_fail">video transform fail</string>
+
+
+</resources>
